@@ -1,17 +1,17 @@
  <?php
- use function Livewire\Volt\{state, rules};
- state('url');
+ use function Livewire\Volt\{state, rules, form};
+ use App\Livewire\Forms\UrlForm;
  
- rules(['url' => 'required|url']);
+ form(UrlForm::class);
  
  $submit = function () {
-     $this->validate();
+     $this->form->validate();
  };
  ?>
 
  <x-app-layout>
      @volt
-         <form wire:submit="submit" wire:model="url">
+         <form wire:submit="submit" wire:model="form.url">
              <input type="text" id="url"
                  class="w-full rounded-lg border-slate-300 text-slate-800 
                  h-14 px-5 text-lg placeholder:text-slate-400 focus:ring-2 
@@ -25,7 +25,7 @@
                      Get Short URL
                  </button>
 
-                 @error('url')
+                 @error('form.url') 
                      <div>{{ $message }}</div>
                  @enderror
              </div>
