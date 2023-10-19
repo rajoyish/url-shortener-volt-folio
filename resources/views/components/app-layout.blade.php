@@ -6,13 +6,15 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="shortcut icon" href="https://laravel.com/img/logomark.min.svg" type="image/x-icon">
      <title>{{ config('app.name') }}</title>
-     @vite(['resources/css/app.css', 'resource s/app/app.js'])
- </head>
+     @vite(['resources/css/app.css', 'resources/js/app.js'])
+ </head> 
 
  <body>
-     <div class="max-w-2xl mt-32 mx-auto">
+     <div class="max-w-2xl mt-32 mx-auto p-8">
          {{ $slot }}
      </div>
+
+     @livewireScriptConfig
  </body>
 
  </html>
