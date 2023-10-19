@@ -8,6 +8,6 @@ use Livewire\Form;
 class UrlForm extends Form
 {
     #[Rule('required', message: 'You need to enter a URL ')]
-    #[Rule('url', message: 'That doesn\'t loo k like an URL')]
+    #[Rule('url', message: 'That doesn\'t look like an URL')]
     public $url = '';
 }

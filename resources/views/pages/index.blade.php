@@ -13,7 +13,7 @@ $submit = function (HashidGenerator $hashIdGenerator) {
 
     $this->url = Url::create(
         $this->form->only('url') + [
-            'hashid' => $hashIdGenerator->generate(), 
+            'hashid' => $hashIdGenerator->generate(),
         ],
     );
 };
@@ -30,7 +30,7 @@ $submit = function (HashidGenerator $hashIdGenerator) {
                             class="w-full rounded-lg border-slate-300 text-slate-800
                          h-14 px-5 text-lg placeholder:text-slate-400 focus:ring-2
                          focus:ring-blue-500"
-                            value="{{ $url->id }}" readonly>
+                            value="{{ $url->redirectUrl() }}" readonly>
                     </div>
                 </div>
             @else
