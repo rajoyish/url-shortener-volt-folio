@@ -56,7 +56,7 @@ $clear = function () {
                     class="w-full rounded-lg border-slate-300 text-slate-800 
                      h-14 px-5 text-lg placeholder:text-slate-400 focus:ring-2 
                      focus:ring-blue-500"
-                    placeholder="e.g. https://google.com">
+                    placeholder="e.g. https://google.com" autofocus x-init="$el.focus()">
             @endif
 
             <div class="flex items-baseline space-x-4">
